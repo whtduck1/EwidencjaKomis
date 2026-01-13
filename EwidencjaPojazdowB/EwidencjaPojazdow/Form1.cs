@@ -71,5 +71,24 @@ namespace EwidencjaPojazdow
             numRokProdukcji.Value = 2020;
             dtpDataPrzegladu.Value = DateTime.Now;
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            var daneFiltr = dgvPojazdy.Rows.Cast<DataGridViewRow>()
+        .Where(row => !row.IsNewRow)
+        .Select(row => new
+        {
+            NrRejestracyjny = row.Cells[0].Value?.ToString(),
+            Marka = row.Cells[1].Value?.ToString(),
+            Wlasciciel = row.Cells[5].Value?.ToString(),
+            DataPrzegladu = DateTime.Parse(row.Cells[4].Value?.ToString())
+        })
+        .Where(p => p.DataPrzegladu.Month == DateTime.Now.Month &&
+                    p.DataPrzegladu.Year == DateTime.Now.Year)
+        .ToList();
+            FormRaport okno = new FormRaport();
+            okno.PokazRaport(daneFiltr);
+            okno.Show();
+        }
     }
 }

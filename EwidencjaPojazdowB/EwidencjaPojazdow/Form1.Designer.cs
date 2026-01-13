@@ -48,6 +48,7 @@
             this.colRok = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colData = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colWlasciciel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numRokProdukcji)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPojazdy)).BeginInit();
             this.SuspendLayout();
@@ -230,11 +231,22 @@
             this.colWlasciciel.Name = "colWlasciciel";
             this.colWlasciciel.ReadOnly = true;
             // 
+            // btnReport
+            // 
+            this.btnReport.Location = new System.Drawing.Point(840, 171);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(102, 23);
+            this.btnReport.TabIndex = 14;
+            this.btnReport.Text = "Generuj Raport";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 508);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.dgvPojazdy);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.txtWlasciciel);
@@ -280,6 +292,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colRok;
         private System.Windows.Forms.DataGridViewTextBoxColumn colData;
         private System.Windows.Forms.DataGridViewTextBoxColumn colWlasciciel;
+        private System.Windows.Forms.Button btnReport;
     }
 }
 
