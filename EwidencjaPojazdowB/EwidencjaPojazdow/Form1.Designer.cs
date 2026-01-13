@@ -56,6 +56,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(65, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 13);
@@ -65,6 +66,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Location = new System.Drawing.Point(227, 56);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
@@ -74,6 +76,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Location = new System.Drawing.Point(350, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(36, 13);
@@ -83,6 +86,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Location = new System.Drawing.Point(463, 56);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 13);
@@ -92,6 +96,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label5.Location = new System.Drawing.Point(636, 56);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 13);
@@ -101,6 +106,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label6.Location = new System.Drawing.Point(863, 55);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
@@ -152,10 +158,12 @@
             // 
             // dtpDataPrzegladu
             // 
+            this.dtpDataPrzegladu.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDataPrzegladu.Location = new System.Drawing.Point(585, 72);
             this.dtpDataPrzegladu.Name = "dtpDataPrzegladu";
             this.dtpDataPrzegladu.Size = new System.Drawing.Size(200, 20);
             this.dtpDataPrzegladu.TabIndex = 10;
+            this.dtpDataPrzegladu.Value = new System.DateTime(2026, 1, 13, 0, 0, 0, 0);
             // 
             // txtWlasciciel
             // 
@@ -166,9 +174,9 @@
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(852, 124);
+            this.btnDodaj.Location = new System.Drawing.Point(840, 124);
             this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(75, 23);
+            this.btnDodaj.Size = new System.Drawing.Size(103, 23);
             this.btnDodaj.TabIndex = 12;
             this.btnDodaj.Text = "Dodaj Pojazd";
             this.btnDodaj.UseVisualStyleBackColor = true;
@@ -233,7 +241,7 @@
             // 
             // btnReport
             // 
-            this.btnReport.Location = new System.Drawing.Point(840, 171);
+            this.btnReport.Location = new System.Drawing.Point(841, 153);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(102, 23);
             this.btnReport.TabIndex = 14;
@@ -262,6 +270,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
+            this.RightToLeftLayout = true;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numRokProdukcji)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPojazdy)).EndInit();
